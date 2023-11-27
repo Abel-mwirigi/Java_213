@@ -5,9 +5,10 @@ public class lesson1{
         int a = 10;
         int b = 20;
         int c;
-        Scanner myInput = new Scanner(System.in);
-        System.out.println("Enter a numbr");
-        c = myInput.nextInt();
+        try (Scanner myInput = new Scanner(System.in)) {
+            System.out.println("Enter a numbr");
+            c = myInput.nextInt();
+        }
         int result = a + b + c;
         System.out.println(result);
     }
